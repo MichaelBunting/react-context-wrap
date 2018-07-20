@@ -1,0 +1,15 @@
+{
+  "name": "react-context-wrapper",
+  "version": "1.0.0",
+  "description": "Wrapper for React context API that allows access to context in class methods",
+  "main": "index.js",
+  "repository": "git@github.com:MichaelBunting/react-context-wrapper.git",
+  "author": "Michael Bunting",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "rollup-plugin-babel": "^3.0.7"
+  }
+}
