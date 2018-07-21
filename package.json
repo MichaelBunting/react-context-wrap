@@ -7,9 +7,19 @@
   "author": "Michael Bunting",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c"
+    "build": "webpack -p",
+    "start": "webpack --watch"
   },
   "devDependencies": {
-    "rollup-plugin-babel": "^3.0.7"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "react": "^16.4.1"
   }
 }
