@@ -2,10 +2,8 @@ import React from 'react';
 
 const { Consumer, Provider } = React.createContext();
 
-const connect = (component, mapContextToProps) => {
-  const Component = component;
-
-  const FunctionalComp = () => (
+const connect = (Component, mapContextToProps) => {
+  return () => (
     <Consumer>
       {context => (
         <Component
@@ -14,8 +12,6 @@ const connect = (component, mapContextToProps) => {
       )}
     </Consumer>
   );
-
-  return FunctionalComp;
 };
 
 export {
