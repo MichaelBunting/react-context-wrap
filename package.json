@@ -1,6 +1,6 @@
 {
   "name": "react-context-wrap",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Wrapper for React context API that allows access to context in class methods",
   "main": "index.js",
   "repository": {
