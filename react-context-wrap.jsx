@@ -3,11 +3,11 @@ import React from 'react';
 const { Consumer, Provider } = React.createContext();
 
 const connect = (Component, mapContextToProps) => {
-  return () => (
+  return (componentProps) => (
     <Consumer>
       {context => (
         <Component
-          {...mapContextToProps(context)}
+          {...Object.assign({}, mapContextToProps(context), componentProps)}
         />
       )}
     </Consumer>
