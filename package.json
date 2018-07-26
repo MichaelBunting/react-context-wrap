@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "Wrapper for React context API that allows access to context in class methods",
   "main": "index.js",
+  "module": "react-context-wrap.jsx",
   "repository": {
     "type": "git",
     "url": "https://github.com/MichaelBunting/react-context-wrap.git"
@@ -10,20 +11,21 @@
   "author": "Michael Bunting",
   "license": "MIT",
   "scripts": {
-    "build": "webpack -p --env.NODE_ENV=production",
-    "start": "webpack --watch --env.NODE_ENV=development"
+    "start": "webpack --watch --env.APP_ENV=development",
+    "build": "webpack --env.APP_ENV=production"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "^4.16.1",
+    "webpack": "^4.16.2",
     "webpack-cli": "^3.1.0"
   },
-  "dependencies": {
-    "react": "^16.4.1"
+  "peerDependencies": {
+    "react": "16.x"
   }
 }

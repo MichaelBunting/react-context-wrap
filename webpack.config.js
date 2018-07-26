@@ -1,6 +1,6 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-module.exports = env => ({
+module.exports = (env = {}) => ({
   entry: './react-context-wrap',
   output: {
     path: __dirname,
@@ -11,7 +11,7 @@ module.exports = env => ({
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  mode: env.NODE_ENV === 'production' ? 'production' : 'development',
+  mode: 'development',
   module: {
     rules: [{
       test: /\.jsx?/,
@@ -29,15 +29,16 @@ module.exports = env => ({
     }],
   },
   optimization: {
+    minimize: env.APP_ENV === 'production',
     minimizer: [
-      ...(env.NODE_ENV === 'production' ? [new UglifyJsPlugin({
+      new UglifyJsPlugin({
         uglifyOptions: {
           mangle: true,
           output: {
-            comments: false,
+            beautify: false,
           },
         },
-      })] : []),
+      }),
     ],
   },
 });

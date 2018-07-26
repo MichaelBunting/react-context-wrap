@@ -10,7 +10,7 @@ yarn add react-context-wrap
 ## Preface
 This module mostly uses React's built in context functionality, so if you're unfamilliar with how it works, you can see the docs [here](https://reactjs.org/docs/context.html).
 
-This module uses new ES6/7 feature and while it's transpiled into ES5, I didnt include any polyfills. If you plan to support legacy browsers you will need to include your own polyfills.
+This module uses new ES6/7 feature and while it's transpiled into ES5, I didnt include any polyfills. If you plan to support legacy browsers you will need to include your own polyfills for `Object.assign`.
 
 ## Usage
 ### Exports
