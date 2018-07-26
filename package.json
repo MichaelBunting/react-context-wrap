@@ -2,8 +2,7 @@
   "name": "react-context-wrap",
   "version": "1.1.2",
   "description": "Wrapper for React context API that allows access to context in class methods",
-  "main": "index.js",
-  "module": "react-context-wrap.jsx",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/MichaelBunting/react-context-wrap.git"
@@ -12,7 +11,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack --watch --env.APP_ENV=development",
-    "build": "webpack --env.APP_ENV=production"
+    "build": "webpack --env.APP_ENV=production",
+    "prepublish": "yarn build"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
