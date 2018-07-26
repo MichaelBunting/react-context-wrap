@@ -3,15 +3,16 @@ import React from 'react';
 const { Consumer, Provider } = React.createContext();
 
 const connect = (Component, mapContextToProps) => {
-  return (componentProps) => (
+  return React.forwardRef((props, ref) => (
     <Consumer>
       {context => (
         <Component
-          {...Object.assign({}, mapContextToProps(context), componentProps)}
+          ref={ref}
+          {...Object.assign({}, mapContextToProps(context), props)}
         />
       )}
     </Consumer>
-  );
+  ))
 };
 
 export {
