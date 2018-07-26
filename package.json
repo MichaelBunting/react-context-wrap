@@ -3,6 +3,7 @@
   "version": "1.1.1",
   "description": "Wrapper for React context API that allows access to context in class methods",
   "main": "index.js",
+  "module": "react-context-wrap.jsx",
   "repository": {
     "type": "git",
     "url": "https://github.com/MichaelBunting/react-context-wrap.git"
