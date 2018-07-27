@@ -7,7 +7,13 @@
     "type": "git",
     "url": "https://github.com/MichaelBunting/react-context-wrap.git"
   },
-  "author": "Michael Bunting",
+  "keywords": [
+    "react",
+    "context",
+    "wrapper",
+    "es6"
+  ],
+  "author": "Michael Bunting <mikebunting1@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "webpack --watch --env.APP_ENV=development",
